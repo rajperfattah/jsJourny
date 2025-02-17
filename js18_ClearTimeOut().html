@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clear time out method</title>
+</head>
+<body>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+</body>
+<script>
+    var z;
+    
+    function start(){
+        z=setTimeout(start1,1000);
+
+     
+       
+    }
+    function start1(){
+        document.write("<h1> Abdul Fattah </h1>");
+    }
+   
+function stop(){
+        clearTimeout(z);
+}
+</script>
+</html>

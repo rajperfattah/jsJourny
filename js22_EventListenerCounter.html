@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">0</h1>
+    <button  id="btn">count</button>
+    <button onclick="stop()">stop</button>
+</body>
+<script>
+    var i=1;
+    document.getElementById("btn").addEventListener("click",count)
+    function count(){
+        document.getElementById("h1").innerHTML=i;
+        i++;
+    }
+    document.getElementById("btn").addEventListener("mouseenter",changecolor1);
+    function changecolor1(){
+        document.getElementById("h1").style.color="Red";
+    }
+
+    document.getElementById("btn").addEventListener("mouseleave",changecolor2);
+    function changecolor2(){
+    
+        document.getElementById("h1").style.color="black";
+    }
+
+    function stop(){
+    document.getElementById("btn").removeEventListener("click",count)
+    }
+</script>
+</html>

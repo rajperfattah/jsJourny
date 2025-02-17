@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yelo{
+            background-color: yellow;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+
+        }
+        #red{
+            background-color: red;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="move()">clickme</button>
+    <div class="yelo">
+        <div id="red"></div>
+    </div>
+</body>
+<script>
+    function move(){
+        var redelm=document.getElementById("red");
+        var poe=0;
+        var anim=setInterval(anumation1,5);
+
+        function anumation1(){
+            poe++;
+            if(poe==260){
+                clearInterval(anim);
+            }
+            
+            else {
+            redelm.style.top=poe+"px";
+            redelm.style.left=poe+"px";
+            }
+            
+
+            
+
+        }
+    }
+</script>
+</html>

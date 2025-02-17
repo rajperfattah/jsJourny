@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modifying css </title>
+    <style>
+        #main{
+            color: red;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">Abdul Fattah Rajper</div>
+</body>
+<script>
+    var x = document.getElementById("main");
+     x.onmouseover = () => {
+        x.style.color = "blue";
+        x.style.fontSize="100px";
+        x.style.transition="3s";
+    }
+
+    x.onmouseleave = () => {
+        
+        x.style.color = "red";
+        x.style.fontSize="50px";
+        x.style.transition="1s";
+        
+    }
+
+
+</script>
+</html>

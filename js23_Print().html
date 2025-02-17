@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 600px;
+            height: 600px;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed blue;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="main">
+    <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt est autem reiciendis.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, omnis cum. Laudantium quisquam soluta voluptatibus itaque nisi similique aliquid odit. Ea ipsum laborum, accusamus sit assumenda dignissimos non labore minus.</p>
+    <img src="su2.jpeg" alt="">
+    <br>
+    <h1>printable content</h1>
+    <p id="data">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis excepturi inventore dolores quos omnis temporibus aut ullam quaerat. Magni fugit tempore aliquid est aperiam mollitia voluptate inventore praesentium ex doloribus.
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, recusandae iste officia eum alias omnis quasi ipsum deleniti eaque repellat, aperiam, sapiente laboriosam minus perspiciatis. Corporis sunt excepturi saepe earum.
+    </p>
+    <button onclick="printpage()">printpage</button>
+    </div>
+    
+</body>
+<script>
+    function printpage(){
+    var body=document.getElementById("body").innerHTML;
+
+    var data=document.getElementById("data").innerHTML;
+
+    document.getElementById("body").innerHTML=data;
+    window.print();
+    document.getElementById("body").innerHTML=body;
+    }
+</script>
+</html>
