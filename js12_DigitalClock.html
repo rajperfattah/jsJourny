@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital clock</title>
+    <style>
+        body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+        }
+        #h1{
+            font-size: 50px;
+            border: 2px dashed green;
+            width: 390px;
+            height: 150px;
+            padding: 10ppx;
+            margin:auto;
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 60px;
+            color:blue;
+            
+
+            background-color: #08AEEA;
+background-image: -webkit-linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+background-image: -moz-linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+background-image: -o-linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="h1">00:00:00</h1>
+    <!-- <button onclick="time()">time</button> -->
+    
+</body>
+<script>
+     setInterval(time,1000);
+    function time(){
+    var dat=new Date();
+    var h=dat.getHours();
+    var m=dat.getMinutes();
+    var s=dat.getSeconds();
+    var formate=h>12 ? "PM" : "Am";
+
+    if(h>12){
+        h=h-12
+       if(h<10){
+        h="0"+h;
+       }
+    }
+
+    if(m<10){
+        m="0"+m;
+    }
+    if(s<10){
+        s="0"+s;
+    }
+
+    var time= h+" : "+m+" : "+s+" : "+formate;
+
+
+
+   
+
+    document.getElementById("h1").innerHTML=time;
+}
+</script>
+</html>

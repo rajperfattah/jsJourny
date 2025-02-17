@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // first method of array declaring and initilizing
+// var arr=[];
+// arr=["car1","Car2","car3","car4"];
+// document.write(arr[1]);
+
+// second method of declaring and initilizing
+// document.write(cars[1]);
+var cars=new Array("car1","car2","car3","car4");
+
+// document("Getting elements by for loop")
+
+for(var i=0;i<cars.length;i++){
+    document.write(cars[i]);
+    document.write("<br>");
+}
+
+// document("Getting elements by do while loop")
+var j=0;
+do{
+    document.write(cars[j]);
+    document.write("<br>")
+    j++;
+}while(j<cars.length);
+
+var k=0;
+while(k<cars.length){
+    document.write(cars[k]);
+    document.write("<br>");
+    k++;
+}
+</script>
+</html>

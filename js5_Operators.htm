@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operators</title>
+    <style>
+        h1{
+            margin: auto;
+            color: blue;
+            font-size: 50px;
+            height: 300px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            border: 2px dashed red;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+</body>
+<script>
+    var result;
+    var a=prompt("Enter first number")
+    var sign=prompt("Enter operation");
+    var b=prompt("Enter second number")
+
+    if(sign=="+"){
+    result= parseInt(a)+ parseInt(b);
+    }
+    else if(sign=="-"){
+        result=a-b;
+    }
+    else if(sign=="*"){
+        result=a*b;
+    }
+    else if(sign=="/"){
+        result=a/b;
+    }
+    else if(sign=="%"){
+        if(b<=0){
+            alert("Error: Division by zero is not allowed");
+        }
+        result=a%b;
+    }
+    document.getElementsByTagName("h1")[0].innerHTML=result;
+
+
+</script>
+</html>

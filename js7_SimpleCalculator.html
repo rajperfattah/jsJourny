@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple calculator</title>
+    <style>
+    .calsection{
+        margin: auto;
+        width: 400px;
+        height: 400px;
+        border: 2px dashed red;
+
+        background-color: #D9AFD9;
+background-image: -webkit-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+background-image: -moz-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+background-image: -o-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+    }
+
+    .result{
+        width: 370px;
+        height: 50px;
+        margin: auto;
+        padding: 5px;
+        padding-bottom: 20px;
+       
+        text-align: center;
+        font-size: 50px;
+        color: green;
+        border: 2px solid black;
+    }
+    h1{
+        text-align: center;
+        margin: auto;
+        color: aqua;
+    }
+
+    .fields{
+        width: 370px;
+        height: auto;
+        margin: auto;
+        padding: 10px;
+        padding-left: 30px;
+    }
+
+    input{
+        width: 130px;
+        padding: 5px;
+    }
+    button{
+        width: 330px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    button:hover{
+        background-color: #4CAF50;
+    }
+    </style>
+</head>
+<body>
+    <section class="calsection">
+        <h1>Simple Calculator</h1>
+        <div class="result">Display</div>
+        <div class="fields">
+            <input type="number" name="num1" id="num1" placeholder="num1">
+            <select id="sign">
+               <option value="+">+</option> 
+               <option value="-">-</option> 
+               <option value="*">*</option> 
+               <option value="/">/</option> 
+               <option value="%">%</option> 
+            </select>
+            <input type="number" name="num2" id="num2" placeholder="num2">
+            <br>
+            <button onclick="result1()">=</button>
+        </div>
+        <br>
+    </section>
+
+    <script>
+    function result1(){
+        var n1 = parseFloat(document.getElementById("num1").value);
+        var n2 = parseFloat(document.getElementById("num2").value);
+        var sign = document.getElementById("sign").value;
+        var result = 0;
+
+        if(sign=="+"){
+            result = n1 + n2;
+        }
+        else if(sign=="-"){
+            result = n1 - n2;
+        }
+        else if(sign=="*"){
+            result = n1 * n2;
+        }
+        else if(sign=="/"){
+            if(n2 != 0){
+                result = n1 / n2;
+            }
+            else{
+                document.getElementsByClassName("result")[0].innerHTML = "Error !!!";
+                return;
+            }
+        }
+        else if(sign=="%"){
+            if(n2 == 0){
+                
+                document.getElementsByClassName("result")[0].innerHTML = "Error !!!";
+                return;
+            }
+            else{
+                result = n1 % n2;
+            }
+        }
+        else{
+            document.getElementsByClassName("result")[0].innerHTML = "Invalid operation";
+            return;
+        }
+
+        document.getElementsByClassName("result")[0].innerHTML = result.toFixed(2);
+    }
+    </script>
+</body>
+</html>

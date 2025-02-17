@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>special methods of array</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <button onclick="push1()">push</button>
+    <button onclick="pop1()">pop</button>
+    <button onclick="reverse1()">reverse</button>
+    <button onclick="slice1()">slice</button>
+    <button onclick="original()">original</button>
+    
+</body>
+<script>
+   var fruits=["Mango","Apple","Orange","Banana","PineApple"];
+
+   document.getElementById("h1").innerHTML=fruits;
+function push1(){
+    var item=prompt("add fruit in last");
+    fruits.push(item);
+    document.getElementById("h1").innerHTML=fruits;
+}
+
+function pop1(){
+    fruits.pop();
+    document.getElementById("h1").innerHTML=fruits;
+}
+function reverse1(){
+    fruits.reverse();
+    document.getElementById("h1").innerHTML=fruits;
+
+}
+function slice1(){
+    var start=parseInt(prompt("enter start index"));
+    var end=parseInt(prompt("enter end index"));
+    var x=fruits.slice(start,end);
+    document.getElementById("h1").innerHTML=x;
+}
+
+function original(){
+    document.getElementById("h1").innerHTML=fruits;
+}
+
+</script>
+</html>
