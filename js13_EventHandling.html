@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events in javascript</title>
+    <style>
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: dodgerblue;
+    color: white;
+    border: 2px dashed blue;
+    margin-top: 30px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <button id="btn1">click me</button>
+    <button ondblclick="alert('second click done here ')">double click me</button>
+    <div>
+        this is a box
+    </div>
+</body>
+<script>
+var btn1=document.querySelector("#btn1");
+btn1.onclick = () =>{
+    document.write("buutton was clicked")
+}
+
+let box=document.querySelector("div");
+box.onmouseover = () => {
+    box.style.background="Yellow";
+    box.style.transition= "2s";
+}
+box.onmouseleave = () =>{
+     box.style.background="dodgerblue";
+}
+</script>
+</html>
