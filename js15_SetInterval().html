@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval method</title>
+</head>
+<body>
+    <button onclick="test()">test</button>
+</body>
+<script>
+//     function test() {
+//     setInterval(function(){
+//         document.write("hellow");
+//     },2000);
+// }
+
+function test(){
+    setInterval(check,300);
+}
+function check(){
+    var i=0;
+    document.write(i +" <br>");
+    i++;
+}
+</script>
+</html>
