@@ -9,6 +9,11 @@
             color: red;
             font-size: 50px;
         }
+        .blue{
+            color: blue;
+            font-size: 50px;
+
+        }
     </style>
 </head>
 <body>
@@ -17,9 +22,16 @@
     <h1 id="res"></h1>
 </body>
 <script>
+    var teste=document.getElementById("test");
     function test(){
-        var cls= document.getElementById("test").getAttribute("class");
+        var cls= teste.getAttribute("class");
         document.getElementById("res").innerText=cls;
+        if(cls==="red"){
+            teste.setAttribute("class","blue")  
+        }
+        else{
+            teste.setAttribute("class","red");
+        }
 
     }
 </script>
